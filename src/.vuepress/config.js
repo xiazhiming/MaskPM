@@ -2,6 +2,7 @@ module.exports = {
 
   base: '/MaskPM/',
 
+
   markdown: {
     lineNumbers: false // 代码块显示行号
   },
@@ -21,7 +22,7 @@ module.exports = {
   ],
   themeConfig: {
     repo: 'xiazhiming/MaskPM',
-    docsDir: 'docs',
+    docsDir: 'src',
     editLinks: true,
     subSidebar: 'auto',
      mode: 'auto', // 默认 auto，auto 跟随系统，dark 暗色模式，light 亮色模式
