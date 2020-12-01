@@ -2,13 +2,13 @@
 
 ## PC
 
-- [Dashboard](/pc/Dashboard.md)
-- [Restore](/pc/Restore.md)
-- [Register](/pc/Register.md)
-- [Sign In](/pc/SignIn.md)
-- [Sign Up](/pc/SignUp.md)
-- [Forgot Password](/pc/ForgotPassword.md)
-___ 
+- [Dashboard](pc/Dashboard.md)
+- [Restore](pc/Restore.md)
+- [Register](pc/Register.md)
+- [Sign In](pc/SignIn.md)
+- [Sign Up](pc/SignUp.md)
+- [Forgot Password](pc/ForgotPassword.md)
+___
 
 - [Personas](/pc/Personas.md)
 - [Post](/pc/Post.md)
@@ -16,7 +16,7 @@ ___
 - [Group](/pc/Group.md)
 - [File](/pc/File.md)
 
-___ 
+___
 
 - [Wallet](/pc/Wallet.md)
 - [Transfer](/pc/Transfer.md)
@@ -26,7 +26,7 @@ ___
 - [History](/pc/History.md)
 - [Sale](/pc/Sale.md)
 
-___ 
+___
 
 - [Settings](/pc/Settings.md)
 - [General](/pc/General.md)
