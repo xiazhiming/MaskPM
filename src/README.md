@@ -4,9 +4,8 @@
 
 - [Dashboard](pc/Dashboard.md)
 - [Restore](pc/Restore.md)
-- [Register](pc/Register.md)
-- [Sign In](pc/SignIn.md)
 - [Sign Up](pc/SignUp.md)
+- [Sign In](pc/SignIn.md)
 - [Forgot Password](pc/ForgotPassword.md)
 ___
 
