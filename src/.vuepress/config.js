@@ -1,6 +1,6 @@
 module.exports = {
 
-  base: '/',
+  base: '/MaskPM/',
 
   markdown: {
     lineNumbers: false // 代码块显示行号
@@ -20,7 +20,7 @@ module.exports = {
     ['link', { rel: 'stylesheet', type: 'text/css', href: '/css/jquery.fancybox.min.css' }]
   ],
   themeConfig: {
-    repo: 'xiazhiming/Documents',
+    repo: 'xiazhiming/MaskPM',
     docsDir: 'docs',
     editLinks: true,
     subSidebar: 'auto',
@@ -47,9 +47,7 @@ module.exports = {
 
         sidebar: {
           '/app/': [
-            '', /* /foo/ */
-            'one', /* /foo/one.html */
-            'two' /* /foo/two.html */
+            ''
           ],
 
           '/pc/': [
