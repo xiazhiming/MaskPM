@@ -69,9 +69,8 @@ module.exports = {
 
             'Dashboard',
             'Restore',
-            'Register',
-            'SignIn',
             'SignUp',
+            'SignIn',
             'ForgotPassword',
             'Personas',
             'Post',
