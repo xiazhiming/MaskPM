@@ -29,6 +29,8 @@ module.exports = {
     modePicker: false, // 默认 true，false 不显示模式调节按钮，true 则显示
     // 默认为 "Edit this page"
     editLinkText: '帮助我们改善此页面！',
+
+
     locales: {
 
       '/': {
@@ -36,6 +38,7 @@ module.exports = {
         selectText: '选择语言',
         // 该语言在下拉菜单中的标签
         label: '简体中文',
+
         // 编辑链接文字
         editLinkText: '在 GitHub 上编辑此页',
         // Service Worker 的配置
@@ -45,6 +48,16 @@ module.exports = {
             buttonText: "刷新"
           }
         },
+   nav: [
+      {
+        text: '设计稿',
+        items: [
+          { text: 'Maskbook', link: 'https://www.figma.com/files/project/4622570/Maskbook' },
+          { text: 'New Dashboard', link: 'https://www.figma.com/files/project/16731522/Mask-Network' }
+        ]
+      }
+    ],
+
 
         sidebar: {
           '/app/': [
