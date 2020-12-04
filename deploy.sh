@@ -2,7 +2,7 @@
 
 # 确保脚本抛出遇到的错误
 set -e
-
+lint-md /Users/xiazhiming/GitHub/MaskPM/src --fix
 # 生成静态文件
 npm run build
 
