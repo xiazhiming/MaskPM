@@ -1,5 +1,11 @@
 ## SingIn
 
+<a data-fancybox  href="imges/Register.png">![imges/Register.png](imges/Register.png)</a>
+
+
+
+
+
 ##  需求描述
 
 - 两种用户登录，托管用户和非托管用户。托管用户和非托管用户，均验证本地账户和密码。错误提示：

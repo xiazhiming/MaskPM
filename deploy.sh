@@ -2,7 +2,11 @@
 
 # 确保脚本抛出遇到的错误
 set -e
+# 检查文件语言格式错误
 lint-md /Users/xiazhiming/GitHub/MaskPM/src --fix
+#复制图片是静态资源
+cp -Rf /src/imges/* /src/.vuepress/dist/imges/
+
 # 生成静态文件
 npm run build
 
