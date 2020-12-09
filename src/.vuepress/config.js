@@ -66,30 +66,10 @@ module.exports = {
 
           '/pc/': [
             '', /* /bar/ */
-
             'Dashboard',
-            'Restore',
-            'SignUp',
-            'SignIn',
-            'ForgotPassword',
             'Personas',
             'Wallet',
-            'Transfer',
-            'Swap',
-            'RedPacket',
-            'Buy',
-            'History',
-            'Sale',
-            'Settings',
-            'General',
-            'Backup',
-            'Restore-login',
-            'ChangeEmail',
-            'ChangePassword',
-            'PasswordAuthorization'
-
-
-            
+            'Settings'
           ],
 
           // fallback
