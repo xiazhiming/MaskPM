@@ -7,7 +7,7 @@
 - Toolbar 显示 Personas 账户，无任何账户，进入 Personas 创建页面。
 - Toolbar 显示 Personas 账户下拉，显示所有 Personas 账户列表。显示当前 Personas 状态。单个 Personas 编辑名称，链接/解除链接 社交账户。默认每个 Personas 可以链接一个 Twiteer 和 Facebook 账户。
 - 备份账户，点击后跳转至设置页面，进行备份。
-- 删除 Personas 需要密码。
+- 删除 Personas 需要密码进行验证。
 
 ### Tabs
 
