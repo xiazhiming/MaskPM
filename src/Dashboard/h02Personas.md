@@ -1,6 +1,5 @@
 ---
-title: Personas
-
+title: 角色
 ---
 
 
@@ -28,18 +27,34 @@ title: Personas
 
 ### 加密 Post
 
+整体为展示用户已经发送的加密信息。并且可以进行跳转查看。
+
 - #### 加密文章
 
+  - 加密信息展示，默认不超过 1 行。
+  - 接收人群。
+
 - #### 投票
+
+  - 投票问题
+  - 接收人群
 
 - #### 红包
 
   - Token 红包
+    - 推文信息
+    - 红包标题
+    - Token 类型、数量、已领取数量和总数
   - 收藏品红包
-  
+    - 推文信息
+    - 红包标题
+    - Token 类型、数量、已领取数量和总数
+
 - #### 出售
 
   - 加密资产出售
+    - 出售标题
+    - 出售资产数量
   - 收藏品出售
   
 - #### 加密文件
@@ -50,10 +65,7 @@ title: Personas
 
 - 未安装 Mask 好友
   
-  - 
 - 已安装 Mask 好友
-  
-- 
   
 - 显示用户的时间线所能捕捉的用户，可以进行标星，分组，邀请未安装 Mask Network 用户安装。可以进行用户在列表删除。
 
@@ -108,4 +120,4 @@ title: Personas
   - 搜索按钮，搜索文件名字，回车键后显示搜索结果。没有结果显示 **No Results**
   - 已删除文件，显示文件列表，侧边栏显示 还原和永久删除按钮。
 
-[Figma设计链接](https://www.figma.com/file/xxHFHHzRgN2E90xCOB83ae/Dashboard?node-id=357%3A899)
+[Figma 设计链接](https://www.figma.com/file/xxHFHHzRgN2E90xCOB83ae/Dashboard?node-id=357%3A899)

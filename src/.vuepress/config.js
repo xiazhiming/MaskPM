@@ -57,7 +57,7 @@ module.exports = {
    nav: [
            { text: '首页', link: '/' },
         { text: 'Dashboard', link: '/Dashboard/' },
-        { text: 'App', link: '/App/' },
+        { text: 'Forestage', link: '/Forestage/' },
       {
 
         text: '设计稿',

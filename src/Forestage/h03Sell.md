@@ -1,5 +1,5 @@
 ---
-title: Post
+title: 发售
 ---
 
 ## Token 发售

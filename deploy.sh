@@ -3,7 +3,7 @@
 # 确保脚本抛出遇到的错误
 set -e
 # 检查文件语言格式错误
-lint-md /Users/xiazhiming/GitHub/MaskPM/src --fix
+lint-md ./src --fix
 #复制图片是静态资源
 cp ./src/imges/* ./src/.vuepress/public/imges/
 

@@ -1,5 +1,5 @@
 ---
-title: Register
+title: 注册
 ---
 
 <a data-fancybox  href="http://assets.processon.com/chart_image/5fcf1bf2e0b34d42525295ae.png">![imges/issue.png](http://assets.processon.com/chart_image/5fcf1bf2e0b34d42525295ae.png)</a>
@@ -22,7 +22,7 @@ title: Register
 
 ### 密码失效规则
 
-用户在登录账户密码有效期为3天，3天内进行任何操作，密码有效期在最后操作时间后延续三天。
+用户在登录账户密码有效期为 3 天，3 天内进行任何操作，密码有效期在最后操作时间后延续三天。
 
 
 
@@ -106,4 +106,4 @@ title: Register
 
 ### 
 
-[Figma设计链接](https://www.figma.com/file/xxHFHHzRgN2E90xCOB83ae/Dashboard?node-id=18%3A4066)
+[Figma 设计链接](https://www.figma.com/file/xxHFHHzRgN2E90xCOB83ae/Dashboard?node-id=18%3A4066)

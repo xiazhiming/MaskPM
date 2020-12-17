@@ -1,9 +1,22 @@
-## Overview
+## 安装
+
+- 克隆项目至本地
+
+``` shell
+git clone git@github.com:xiazhiming/MaskPM.git
+```
+
+- 安装 vuepress
+
+``` shell
+yarn init // 初始化项目
+yarn add -D vuepress // 安装vuepress
+yarn add -D vuepress-plugin-auto-sidebar // 安装导航插件
+npm i -g lint-md-cli // 安装语法检查器
+```
 
 
 
+- [Dashboard](/Dashboard)
+- [Forestage](/Forestage)
 
-
-现有 Mask Network 功能布局。目前支持的平台有两个。分别是Tiwtter 和 Facebook，主要的接入方式是为插件，Chrome 插件和 Firefox 插件。安卓和 IOS 设备。 
-
-### 
