@@ -13,14 +13,51 @@ title: 图片隐写
 ## 图片隐写
 
 - 图片大小1200*680 
+
 - 默认图片隐写
+
   - Post 默认图片-自由女神
   - 红包 Token 默认图片-
   - 红包 收藏品 默认图片-Mona Lisa 
   - 发售Token 默认图片
   - 发售收藏品图片
+
 - 图片自定义
+
   - 图片大小长宽不高于1200px。超出大小图片按最长边裁切至1200存储。
 
-[Figma 设计链接](https://www.figma.com/file/gVkQ67y285b4FXVV1KPThN/Twitter?node-id=2595%3A83)
+## 用户查看权限
+
+#### 自己查看
+
+- Decrypted by Mask Network +Append recipients
+
+- 信息内容
+
+- +隐写图片（文字加密类不显示）
+
+#### 好友装有 Mask 且有查看权限
+
+- Decrypted by Mask Network 
+
+- 信息内容
+
+- +隐写图片（文字加密类不显示）
+
+#### 装有 Mask 但是无查看权限
+
+- This tweet is encrypted with #mask_io.  
+
+- Decrypted by Mask Network 
+- You are not authorized to view it, please ask the owner for authorization.
+- +隐写图片（文字加密类不显示）
+#### 无 Mask 用户
+
+- This tweet is encrypted with #mask_io.  
+
+- Install Https://Mask.io to decrypt it.
+- 信息内容
+- +隐写图片（文字加密类不显示）
+
+[Figma 设计链接](https://www.figma.com/file/gVkQ67y285b4FXVV1KPThN/Twitter?node-id=2581%3A0)
 
