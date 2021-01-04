@@ -1,5 +1,5 @@
 ---
-title: 发售
+title: 市场
 ---
 
 ## Token 发售

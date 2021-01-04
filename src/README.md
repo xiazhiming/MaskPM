@@ -15,7 +15,14 @@ yarn add -D vuepress-plugin-auto-sidebar // 安装导航插件
 npm i -g lint-md-cli // 安装语法检查器
 ```
 
+- 使用
+- 进入到本地目录执行
+``` shell
+yarn dev // 本地部署
 
+
+```
+  
 
 - [Dashboard](/Dashboard)
 - [Forestage](/Forestage)

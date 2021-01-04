@@ -59,5 +59,5 @@ title: 图片隐写
 - 信息内容
 - +隐写图片（文字加密类不显示）
 
-[Figma 设计链接](https://www.figma.com/file/gVkQ67y285b4FXVV1KPThN/Twitter?node-id=2581%3A0)
+[Figma 设计链接](https://www.figma.com/file/gVkQ67y285b4FXVV1KPThN/Twitter?node-id=2781%3A151037)
 
