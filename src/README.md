@@ -22,8 +22,4 @@ yarn dev // 本地部署
 
 
 ```
-  
-
-- [Dashboard](/Dashboard)
-- [Forestage](/Forestage)
 
