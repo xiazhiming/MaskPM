@@ -246,15 +246,54 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
   - 解除第三方钱包的连接状态。
   
-  
+
+
+
+## 公共模块
+
+- #### 余额显示
+
+  - ERC20 余额显示该钱包所有余额
+  - ETH 余额显示。显示问题符号。划过显示：**Transaction costs were subtracted from your ETH balance. This is not your full wallet ETH balance.**  算法规则: ETH 的总额-
+
+- #### 转账 Gas fee
+
+  - Set Gas Fee 默认显示 [Gas now](https://www.gasnow.org/) 中，Standard 和 Fast gas price。以及自定义和相应的计算。
+
+  - Gas Fee 的计算。Gas price * Gas Limit = 总共需要消耗的 ETH 数量。计算价格再*当前 ETH 的价格。
+
+- #### Advanced Date
+
+  - 点击显示 Memo 字段。这个是 区块中的扩展字段。可以备注或者用作验证等。
+
+- #### Unlock 解锁余额
+
+- 合约交互前，需要将用户的使用的资产对合约进行 Approve。ETH 资产除外。Approve 分为两类：
+
+  - 限定量 Approve ，用户指定合约最多使用该钱包该资产使用额度。用户可以重复多次进行 Appove 来调整对于合约的授信额度。在授信额度内，合约可以不经过用户的确定使用该钱包该类资产的授信额度。
+  - 过度 Approve ，即用户可以进行合约对该钱包，无限额度授予。用户可以后期重新调整 Appove 的值。
+
+  - 限定解锁，
+  - 无限量解锁
+
+- #### 搜索/添加 ERC20 Token
+
+  - 展示 Token 的图标，symbol、Token name 以及用户当前钱包的余额。以及对应的价值。
+
+  - 在列表中可以进行 sybmol 、Token name 模糊搜索。判断地址位精确查询。
+
+  - 搜索结果未在常用列表中展示，显示 Add 按钮。已添加未在常用列表中的 Token 显示 Remove 按钮
+
+- #### 搜索/添加 ERC721 Token
+
+  - 目前支持 ERC721 合约。获取常用列表前 100。[查询地址](https://etherscan.io/tokens-nft) 点击弹出 Search Coollections Contact 弹窗。
+
+  - Search Coollections Contact 搜索使用 Symbol、和 Token 模糊收缩。合约地址使用精确查找。
+
+  - 非常用列表中 ERC721，在搜索出结果手显示 Add 和 Remove 功能。添加到用户的列表中。 
 
 ## 转账
 
-- 合约交互前，需要将用户的使用的资产对合约进行 Approve。ETH 资产除外。Approve 分为两类：
-  - 限定量 Approve ，用户指定合约最多使用该钱包该资产使用额度。用户可以重复多次进行 Appove 来调整对于合约的授信额度。在授信额度内，合约可以不经过用户的确定使用该钱包该类资产的授信额度。
-  - 过度 Approve ，即用户可以进行合约对该钱包，无限额度授予。用户可以后期重新调整 Appove 的值。
-- 特例 USDT 
-  
 - #### Token 转账
 
   - 收款地址，根据当前钱包的公链的链接进行地址规则验证。
@@ -267,28 +306,20 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
     - 发送 Token 类型，默认显示 ETH。点击弹出搜索 Token 界面。
 
-    - 搜索 Token 
-
-      - 展示 Token 的图标，symbol、Token name 以及用户当前钱包的余额。以及对应的价值。
-
-      - 在列表中可以进行 sybmol 、Token name 模糊搜索。判断地址位精确查询。
-      - 搜索结果未在常用列表中展示，显示 Add 按钮。已添加未在常用列表中的 Token 显示 Remove 按钮。
+    - 搜索 ERC20 Token。
 
     - Gas Fee 显示需要消耗的费用总量。默认取用 Gas Now 中位 gas 为基准。显示 Fee 设置按钮，点击弹出 Set Gas Fee modal。
 
-    - Set Gas Fee 默认显示 [Gas now](https://www.gasnow.org/) 中，Standard 和 Fast gas price。以及自定义和相应的计算。
+      
 
-      - Gas Fee 的计算。Gas price * Gas Limit = 总共需要消耗的 ETH 数量。计算价格再*当前 ETH 的价格。
-- Advanced 数据。点击显示 Memo 字段。这个是 区块中的扩展字段。可以备注或者用作验证等。
+- Advanced 数据。见公共模块
   
 - #### 收藏品转账 （ERC721 及兼容 ERC721 的合约）
 
   - 收款地址，根据当前钱包的公链的链接进行地址规则验证。
-  - Token 类型，目前支持 ERC721 合约。获取常用列表前 100。[查询地址](https://etherscan.io/tokens-nft) 点击弹出 Search Coollections Contact 弹窗。
-  - Search Coollections Contact 搜索使用 Symbol、和 Token 模糊收缩。合约地址使用精确查找。
-  -  非常用列表中 ERC721，在搜索出结果手显示 Add 和 Remove 功能。添加到用户的列表中。 
-  - Gas Fee 同 Token 转账。
-  - Advanced 数据 与 Token 一样。
+  - Token 类型，见公共模块中 ERC721 Token。
+  - Gas Fee 见公共模块。
+  - Advanced 见公共模块。
 
 ## Swap
 
@@ -331,7 +362,7 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
   1inch.exchange 是一款以太坊網絡上的 DEX 聚合器，它通過集成 Airswap、Uniswap、Uniswap2、Kyber、 Curve、Oasis、0x 、dForce Swap 等其他 DEX 協議的流通性，能幫用戶找到最佳的交易路徑（低滑點、低延遲）。
 
-- Swap 流程
+- ### Swap 流程
 
   - 支付 Token 种类，显示当前 Token 余额。
   - 解锁钱包 Token ，限量解锁和无上限解锁 approve 给合约。实现需要查看该地址已经 approve 数量，超出当前输入值，显示解锁按钮。当前交易按钮为 Unlock 状态。
@@ -339,13 +370,30 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
   - 搜索 Token 功能同转账。
   -  交易选择。同时向 uniswap 0x 进行询价，对比获得 Token*Price - Gas fee 的结果。选择结果大的展示。
 
+
+
+
+
 ## 红包
 
 - #### Token 红包
 
-  - 支持标准的 erc20 支持
+  - Arrached Message 祝福语长度不超过 64 个字符。超出字符不显示且无效。
+  - Split Mode  分为随机和均等两种类型。
+  - Share 前台输入限制为 1000，超出显示 1000。
+  - Amount Per Share  Share*Amount Per Share 应该小于用户钱包余额。ETH 作为红包时候，钱包的余额需要那总金额-红包合约 Gas Limit * Gas now 中 Gas Price 中 Rapid 档位。并显示
+
+  - 支持标准的 erc20 合约和 ETH。后续支出其他公链和对应合约资产。Search Token 弹出同转账规则。
+  - Transaction fee 同转账规则。
+  - Approval Token 查询当前钱包该 Token 的数量与输入的 Total 
 
 - #### 收藏品红包
+
+- #### 分享
+
+
+
+
 
 ## 发售功能
 
@@ -353,9 +401,17 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
 - #### 收藏品发售
 
+
+
+
+
 ## 法币购买
 
 - #### Transak
+
+
+
+
 
 ## 历史记录
 
@@ -374,6 +430,10 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
   - 收藏品 发售
 
   
+
+
+
+
 
 ## 前台钱包
 
