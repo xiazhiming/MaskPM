@@ -378,18 +378,49 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
 - #### Token 红包
 
-  - Arrached Message 祝福语长度不超过 64 个字符。超出字符不显示且无效。
+  - Arrached Message 祝福语长度不超过 64 个字符。超出字符不显示且后续输入无效。
   - Split Mode  分为随机和均等两种类型。
   - Share 前台输入限制为 1000，超出显示 1000。
   - Amount Per Share  Share*Amount Per Share 应该小于用户钱包余额。ETH 作为红包时候，钱包的余额需要那总金额-红包合约 Gas Limit * Gas now 中 Gas Price 中 Rapid 档位。并显示
-
   - 支持标准的 erc20 合约和 ETH。后续支出其他公链和对应合约资产。Search Token 弹出同转账规则。
   - Transaction fee 同转账规则。
-  - Approval Token 查询当前钱包该 Token 的数量与输入的 Total 
+  - UnlockToken 查询当前钱包该 Token 的数量与输入的 Total。或者进行无限制 Unlcock。 本地钱包在有效期内直接进行 Unlock。安装状态为 Unlocking。插件钱包显示合约交互弹窗。提醒用户在插件钱包中进行操作。插件钱包取消操作。弹窗饭庄解锁界面，提示插件钱包已取消解锁操作。解锁成功后，按钮进入 Send 状态。
+  - Send Token ，点击后显示二次确认信息。继续进行 Send 操作。本地钱包在密码有效期内直接进行操作。密码有效期过后，弹出密码弹窗。插件钱包执行取消操作，loading 弹窗退回只二次确认页面。并提示插件钱包已取消 Send 操作。发送成功，显示成功消息后并关闭 loading 弹窗。进入到分享状态。
 
 - #### 收藏品红包
 
+  - Arrached Message 祝福语长度不超过 64 个字符。超出字符不显示且后续输入无效。
+  - Contract address  要求 ERC721 合约公共模块。
+  - 显示列表为 12 个，超出后显示滑动条。NFT 卡片显示名称，划过显示删除按钮。最后一个卡片为添加按钮。最多选择 20 NFT。
+    - 添加按钮显示当前合约的所有 NFT Token。计算数量不能超出 20 超出后 选择框禁用。
+  - Unlock 当前 ERC721 合约。内置钱包直接 approve 。按钮显示 Unlocking 和 loading 动画。 第三方钱包，显示 Contract interaction ，收到结果后关闭弹窗。 结果为 1.解锁成功，2.解锁失败。
+  - gas 设置同公共模块。
+  - Send 需要进行二次确认。内置本地钱包有效期内直接在二次确认后进行发送。Send 按钮进入 loading 状态。插件钱包。显示 loading 弹窗。外置钱包取消交易退回确认状态，并显示插件钱包取消提示。可以继续二次 Send 。失败后关闭 loading 弹窗。退回确认并显示发送失败，请重试。发送成功后进入分享状态。
+
 - #### 分享
+
+  - Twitter 分享，点击后新开窗口并打开前台 Maskbook:Compose 并默认选中当前红包。
+
+  - Facebook 分享，点击后新开窗口并打开前台 Maskbook:Compose 并默认选中当前红包。
+
+  - 单独分享。生成短链接地址供用户转发。其他用户可以进行点击查看。
+
+    - 查看用户没有安装 Mask，领取按钮修改为下载 Mask 按钮。
+    - 查看用户安装了 Mask，没有安装钱包，显示连接钱包按钮状态。前台[点击链接钱包流程](https://www.figma.com/file/gVkQ67y285b4FXVV1KPThN/Twitter?node-id=2235%3A0)。
+    - 查看用户安装了 Mask，且安装了钱包。
+      - 判断用户钱包网络是否正确。正确，显示提取按钮。不正确，显示仅支持 $$ 网络。
+
+  - 用户领取
+
+    - 钱包余额不够该次交易，显示交易费用不够。
+
+    - 本地钱包 显示 loading 直接领取。
+
+    - 插件钱包。显示 loading ，并提示请在钱包允许，并等待。
+
+      - 插件钱包取消，显示插件钱包已取消。
+
+        
 
 
 
