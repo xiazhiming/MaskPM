@@ -148,7 +148,52 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
 [Ether 合约列表](https://github.com/ethereum/EIPs/tree/master/EIPS)
 
-## 创建钱包
+
+
+## 3. 公共模块
+
+- #### 余额显示
+
+  - ERC20 余额显示该钱包所有余额
+  - ETH 余额显示。显示问题符号。划过显示：**Transaction costs were subtracted from your ETH balance. This is not your full wallet ETH balance.**  算法规则: ETH 的总额-
+
+- #### 转账 Gas fee
+
+  - Set Gas Fee 默认显示 [Gas now](https://www.gasnow.org/) 中，Standard 和 Fast gas price。以及自定义和相应的计算。
+
+  - Gas Fee 的计算。Gas price * Gas Limit = 总共需要消耗的 ETH 数量。计算价格再*当前 ETH 的价格。
+
+- #### Advanced Date
+
+  - 点击显示 Memo 字段。这个是 区块中的扩展字段。可以备注或者用作验证等。
+
+- #### Unlock 解锁余额
+
+- 合约交互前，需要将用户的使用的资产对合约进行 Approve。ETH 资产除外。Approve 分为两类：
+
+  - 限定量 Approve ，用户指定合约最多使用该钱包该资产使用额度。用户可以重复多次进行 Appove 来调整对于合约的授信额度。在授信额度内，合约可以不经过用户的确定使用该钱包该类资产的授信额度。
+  - 过度 Approve ，即用户可以进行合约对该钱包，无限额度授予。用户可以后期重新调整 Appove 的值。
+
+  - 限定解锁，
+  - 无限量解锁
+
+- #### 搜索/添加 ERC20 Token
+
+  - 展示 Token 的图标，symbol、Token name 以及用户当前钱包的余额。以及对应的价值。
+
+  - 在列表中可以进行 sybmol 、Token name 模糊搜索。判断地址位精确查询。
+
+  - 搜索结果未在常用列表中展示，显示 Add 按钮。已添加未在常用列表中的 Token 显示 Remove 按钮
+
+- #### 搜索/添加 ERC721 Token
+
+  - 目前支持 ERC721 合约。获取常用列表前 100。[查询地址](https://etherscan.io/tokens-nft) 点击弹出 Search Coollections Contact 弹窗。
+- Search Coollections Contact 搜索使用 Symbol、和 Token 模糊收缩。合约地址使用精确查找。
+  
+  - 非常用列表中 ERC721，在搜索出结果手显示 Add 和 Remove 功能。添加到用户的列表中。 
+
+
+## 3.1 创建钱包
 <a data-fancybox  href="http://assets.processon.com/chart_image/5fdae1db07912906da5db88d.png">![imges/issue.png](http://assets.processon.com/chart_image/5fdae1db07912906da5db88d.png)
 
 
@@ -204,11 +249,10 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
   - [Polkadot Js](polkadot.js.org) 是波卡网络社区开发的钱包。每次交易需要验证密码。
   
-  
 
 
 
-## Toolbar
+## 3.2 Toolbar
 
 - #### 无钱包
 
@@ -246,7 +290,6 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
   - 解除第三方钱包的连接状态。
   
-
 - #### 最近交易
 
   - 显示当前钱包最近的交易情况。最多显示 20 笔，超出隐藏最早记录。
@@ -258,51 +301,36 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
   - 测试版本可以提供测试人员非主网测试功能。
   - 发布的正式版本不支持非主网之外的网络。
   - 后续需要判定其他公链网络是否有该功能。
-
-## 公共模块
-
-- #### 余额显示
-
-  - ERC20 余额显示该钱包所有余额
-  - ETH 余额显示。显示问题符号。划过显示：**Transaction costs were subtracted from your ETH balance. This is not your full wallet ETH balance.**  算法规则: ETH 的总额-
-
-- #### 转账 Gas fee
-
-  - Set Gas Fee 默认显示 [Gas now](https://www.gasnow.org/) 中，Standard 和 Fast gas price。以及自定义和相应的计算。
-
-  - Gas Fee 的计算。Gas price * Gas Limit = 总共需要消耗的 ETH 数量。计算价格再*当前 ETH 的价格。
-
-- #### Advanced Date
-
-  - 点击显示 Memo 字段。这个是 区块中的扩展字段。可以备注或者用作验证等。
-
-- #### Unlock 解锁余额
-
-- 合约交互前，需要将用户的使用的资产对合约进行 Approve。ETH 资产除外。Approve 分为两类：
-
-  - 限定量 Approve ，用户指定合约最多使用该钱包该资产使用额度。用户可以重复多次进行 Appove 来调整对于合约的授信额度。在授信额度内，合约可以不经过用户的确定使用该钱包该类资产的授信额度。
-  - 过度 Approve ，即用户可以进行合约对该钱包，无限额度授予。用户可以后期重新调整 Appove 的值。
-
-  - 限定解锁，
-  - 无限量解锁
-
-- #### 搜索/添加 ERC20 Token
-
-  - 展示 Token 的图标，symbol、Token name 以及用户当前钱包的余额。以及对应的价值。
-
-  - 在列表中可以进行 sybmol 、Token name 模糊搜索。判断地址位精确查询。
-
-  - 搜索结果未在常用列表中展示，显示 Add 按钮。已添加未在常用列表中的 Token 显示 Remove 按钮
-
-- #### 搜索/添加 ERC721 Token
-
-  - 目前支持 ERC721 合约。获取常用列表前 100。[查询地址](https://etherscan.io/tokens-nft) 点击弹出 Search Coollections Contact 弹窗。
-- Search Coollections Contact 搜索使用 Symbol、和 Token 模糊收缩。合约地址使用精确查找。
-  - 非常用列表中 ERC721，在搜索出结果手显示 Add 和 Remove 功能。添加到用户的列表中。 
-
+  - ETH 网络仅提示，如果是 Dot 点击提供网络切换服务。
   
+- #### 网络不可用提示
 
-## 转账
+  - 该钱包在该网络中当前页面无法实现当前功能。
+
+## 3.3 资产
+
+- #### 便捷操作栏
+
+  - 钱包 ICO 显示账户总值，目前仅统计用户的钱包资产。后续可以参考 [debank.com ]() ，或者直接能调取他们的 API 查询钱包中其他 Lp 的资产信息。在 Tab 中新增一项 Mortgage assets。
+  - Send 直接跳转至 Transfer 页面。
+  - Buy 直接跳转至法币购买页面。
+  - Swap 直接跳转至兑换页面。
+  - Receive 点击弹出收款二维码。
+  
+- ####  Token 资产
+
+  - 显示资产 Symbol icon。资产数量默认 6 位。
+  - Price 价格高于 1 美金小数点后显示 2 位。小于 1 美金。按 6 位精度显示。
+  - Value 精度为 2。
+  - 操作显示为 Send 和 Swap 。点击 Send 预填该信息至 Transfer 页面。 点击 Swap 预填该信息至 Swap 页面。
+  - 页面展示为 50，超出分页。资产按 Value 从大到小排列。
+
+- #### Collections 资产
+
+  - 显示账户所有的 Collections 资产，排序为单个合约数量多到少排列。默认显示 20 个，超出分页。
+  - 支持搜索合约地址和 ID 和名称。
+
+## 3.4 转账
 
 - #### Token 转账
 
@@ -327,11 +355,16 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 - #### 收藏品转账 （ERC721 及兼容 ERC721 的合约）
 
   - 收款地址，根据当前钱包的公链的链接进行地址规则验证。
+  
   - Token 类型，见公共模块中 ERC721 Token。
+  
   - Gas Fee 见公共模块。
+  
   - Advanced 见公共模块。
+  
+    
 
-## Swap
+## 3.5 Swap
 
 根据当前钱包的地址，进行资产的换取。目前直接支持 layer1 层的合约协议。目前市面比较多的协议为两种。
 
@@ -384,7 +417,7 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
 
 
-## 红包
+## 3.6 红包
 
 - #### Token 红包
 
@@ -401,7 +434,7 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
   - Arrached Message 祝福语长度不超过 64 个字符。超出字符不显示且后续输入无效。
   - Contract address  要求 ERC721 合约公共模块。
-  - 显示列表为 12 个，超出后显示滑动条。NFT 卡片显示名称，划过显示删除按钮。最后一个卡片为添加按钮。最多选择 20 NFT。
+  - 显示列表为 12 个，超出后显示滑动条。NFT 卡片显示名称，划过显示删除按钮。最后一个卡片为添加按钮。最多选择 50 NFT。
     - 添加按钮显示当前合约的所有 NFT Token。计算数量不能超出 20 超出后 选择框禁用。
   - Unlock 当前 ERC721 合约。内置钱包直接 approve 。按钮显示 Unlocking 和 loading 动画。 第三方钱包，显示 Contract interaction ，收到结果后关闭弹窗。 结果为 1.解锁成功，2.解锁失败。
   - gas 设置同公共模块。
@@ -438,7 +471,7 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
 
 
-## 市场发售
+## 3.7 市场发售
 
 - #### Token 发售
 
@@ -468,12 +501,26 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
 - #### 收藏品发售
 
+  - 发售标题长度不超过 64 个字符。超出字符不显示且后续输入无效。
+  - Contract Address 点击弹出搜索，规则同钱包公共模块搜索 ERC721 合约。
+  - Price unit 下拉选择 ETH、USDT、USDC、DAI。可以进行 ERC20 Token 搜索支持。最多支持兑换 6 种 Token。搜索 ERC20 参考钱包公共模块。
+  - Token 列表显示添加按钮，显示弹出当前选择的合约中的 Collections 。价格不能为空，输入精度，默认不高于 12 位。价格 Token 精度低于 12 位，最高按价格 Token 合约单位精度。
+  - 显示 4 行，超出显示滑动条。
+  - 售出价格不能为空。在 Send 按钮上报错，并禁用按钮。
+  - 交易费用计算，查看钱包公共模块 转账 Gas fee。
+  - Collections 最高单次发售 50 个。  
+  - 点击 Send 显示发送清单，点击 Send 后发送。
+    - 本地钱包在密码有效期内，进行交易发送，toolbar 显示交易状态。
+    - 插件钱包，显示弹窗。提示用户进行允许操作。插件钱包取消，弹窗回退至确认清单页面。并显示插件取消操作提示。
+
+- #### 分享发售
+
+  - 同红包分享规则
 
 
 
 
-
-## 法币购买
+## 3.8 法币购买
 
 - #### Transak
 
@@ -481,27 +528,70 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
 
 
-## 历史记录
+## 3.9 历史记录
 
-- #### 转账记录
+- #### Back 
+
+  - 从其他页面的 History 按钮点击而来。显示 Back 按钮。
+  - 从 History 点击而来，不显示 Back 按钮。 
+
+- #### ALL 转账记录
+
+  - 当前地址所有的交易行为。每页 50 条。超出后分页。
+  - 没有记录显示为空
+  - 合约交互类型
+    - Stake, Unstake, Deposit, Withdraw, Send, Swap, Approve, Add liquidity , Remove Liquidity, Vote, Remove vote...
+    - Mask 发行的合约，Red Packet，ITO（Markets）合约。
+  - Value 显示发生交易的数量，和发送 Token Symbol。小于 1，显示 6 位精度，大于 1，显示 2 位精度。
+  - 时间精确到分即可。
+  - 钱包为 ETH 接收方 点击跳转至 etherscan.io 相应交易记录。
+  - out 类型显示为黄色图标。in 类型显示为绿色图标。out 和 in 都存在的合约显示黄色图标。
+
+- #### Buy 记录
+
+  - 当前地址所有的交易行为。每页 50 条。超出后分页。
+  - 没有记录显示为空
+  - 购买 Types 为购买的 Token symbol。并显示 icon。
+  - Amount 大于 1，显示精度为 2，小于 1，显示为 6 位精度。
+  - Total value 取 etherscan 上的价值，因为涉及到一个快照价格的问题。显示精度为 2。
+  - Time 显示到分。
+  - Tx 显示购买记录的交易记录。点击后新开跳转。
 
 - #### Swap 记录
+
+  - Input 显示支出 Token。 Get 显示获得 Token。大于 1 显示 2 位精度，小于 1 显示 6 位精度。
+  - Total value 显示当时交易的价值。
+  - Time 显示交易时间
+  - Tx 显示交易 Hash 链接，点击跳转 etherscan。
 
 - #### 红包记录
 
   - Token 红包
+    - 显示图标，显示祝福语。超出一行显示... 。显示 Token 总额，显示结束时间。
+    - 未结束显示 share 按钮。分享同红包分享步骤。
+    - 已结束显示 withdarw 按钮，点击显示提现清单和 Gas 调节。
+    - Gas fee 见钱包公共模块
   - 收藏品红包
+    - 显示图标，显示祝福语。超出一行显示... 。显示 Token 总额，显示结束时间。
+    - 未结束显示 share 按钮。分享同红包分享步骤。
+    - 已结束显示 withdarw 按钮，点击显示提现清单和 Gas 调节。
+    - Gas fee 见钱包公共模块
 
-- #### 发售记录
+- #### Markets 记录
 
-  - Token 发售
-  - 收藏品 发售
-
+  - 默认显示 20 条。超出分页。
   
-
-
-
-
-
-## 前台钱包
-
+- Token 发售
+    - 显示发售 Token 图标，显示发售标题。超出一行显示... 。显示 Token 总额，显示开始结束时间。
+    - 显示售出情况，
+    - 未结束显示 share 按钮。分享同 Maekets 分享步骤。
+    - 已结束显示 withdarw 按钮，点击显示提现清单和 Gas 调节。
+    - Gas fee 见钱包公共模块
+  - 收藏品 发售
+    - 显示发售 Collectible 图标，显示发售标题。超出一行显示... 。显示 Token 总额，显示开始结束时间。
+    - 显示售出情况，
+    - 未结束显示 share 按钮。分享同 Maekets 分享步骤。
+    - 已结束显示 withdarw 按钮，点击显示提现清单和 Gas 调节。
+    - Gas fee 见钱包公共模块
+  
+  

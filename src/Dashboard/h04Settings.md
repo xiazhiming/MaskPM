@@ -4,17 +4,39 @@ title: 设置
 
 ## 语言切换
 
+- Engliash
+- Traditional Chinese
+- Japanese
+
 ## 风格模式设定
+
+- Light
+- Dark
+- Follow system settings
 
 ## 交易数据来源
 
+- Coingecko
+- Coinmarketcap
+
 ## 文章渲染模式
 
+- 开关
+
 ## 手机同步（待定）
+
+- 点击输入密码，验证正确后，显示二维码，进行点对点数据传输本地数据。
 
 ## 全局备份
 
 - #### 加密备份
+
+  - 本地备份
+    - 验证密码。验证通过查找准备备份数据并校验。禁用备份按钮。
+    - 备份文件准备妥当后，显示备份详情。备份按钮启用。
+    - 默认使用当前账号进行加密。
+  - icould 备份
+  - google 备份
 
 - #### 非加密备份
 
