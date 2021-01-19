@@ -329,6 +329,15 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
 
   - 显示账户所有的 Collections 资产，排序为单个合约数量多到少排列。默认显示 20 个，超出分页。
   - 支持搜索合约地址和 ID 和名称。
+  
+- ### Investment 资产
+
+  - 参考 debank。
+
+  - LPtoken 
+    - Uniswap、SushiSwap、Bancor、Balancer、Moonswap、Badger、MKR、YFI、Oasis、Dydx、FoeTube、Cream、bZx、
+  - 存款资产
+    - aave、compound、Curve、
 
 ## 3.4 转账
 
@@ -413,7 +422,10 @@ ERC-1155 用了一种新的方式来定义代币，物品将被储存的一个�
   - 搜索 Token 功能同转账。
   -  交易选择。同时向 uniswap 0x 进行询价，对比获得 Token*Price - Gas fee 的结果。选择结果大的展示。
 
-
+- 设置交易来源
+  - uniswap
+  - sushi swap
+  - 0x
 
 
 
