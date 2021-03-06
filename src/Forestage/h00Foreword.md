@@ -32,16 +32,46 @@
 
 1. ### Etherum
 
+   前言：ETH最初的代币是ETC经典， The Dao通过 ICO 私募当时ETC，由于出现合约问题漏洞，转移了3600万枚ETC，后来V神提出硬分叉，并且得到了90%的算力支持。从而建立的新的ETH。
+
+   
+
+   - Etherum 在 BTC 的基础上引入了账户余额模型，创建使用solidity语言的EVM虚拟机。EVM 虚拟机 是一个完全隔离外部通讯的沙盒。在以以太坊中运行的智能合约不允许访问外部网络。外部文件系统，在其进行。智能合约之间的访问也是受到限制的。但是虚拟机的引入了无限的可能。包括后面的erc20、erc721、erc1155等。
+   - 以太坊智能合约和提案 https://github.com/ethereum/EIPs/tree/master/EIPS
+   - 合约地址是由合约中的方法控制的，合约设定有管理员地址，那么管理员就有管理这个合约的能力。合约的常用调用中，使用eth原生资产是不需要 approve 的。使用合约中的资产和其他合约进行交互的时候需要进行approve操作的。例如你在uniswap上进行eth、dai 交换 usdc。使用eth 可以直接进行购买。使用dai购买的话需要进行approve uniswap的合约对你账户中的Dai进行授权使用。
+   - 通常授权分为两种，限定量授权和无限授权。在交易的时候，我需要使用100个dai交互哪
+
+   
+
+   - 外部账户、也就是用户生成的由公私钥来控制的账户。
+
    - Etherum account 每一个账户都包含四个字段， nonce，ether_balance,contact_code.storage.
+
    - Nonce Account 每使用nonce签发并发送一笔交易。都会将其+1，交易的结果是Account 中的ether_balance 的变动，没有UTXO模型，所以引入了nonce来解决重放攻击。
+
    - contract_code 中的代码，所有的合约在网络中都能够相应其他账户的请求和消息并提供一些服务。
-   - 合约账户 ，目前最多的合约账户也就是ERC20 合约，我们平常所说的Token 就是Ethereum上的合约，这些合约其实也是Ethereum上的账户。
-   - ETH最初的代币是ETC经典， The Dao通过 ICO 私募当时ETC，由于出现合约问题漏洞，转移了3600万枚ETC，后来V神提出硬分叉，并且得到了90%的算力支持。从而建立的新的ETH。
+
+     
+
+   - 合约账户 ，目前最多的合约账户也就是ERC20 合约，我们平常所说的Token 就是Ethereum上的合约，这些合约其实也是Ethereum上的账户。合约账户是由合约中的代码控制的。
+
    - 新的Account 模型，鄙弃了原先的UTXT记账模型，优化了存储结构，利用nonce来避免重放攻击。新的交易模型，来维护整个网络的安全。
    - Gas price 与 Gas limit 
+     - Gas price 单位换算，wei 为最小单位 ，通常我们在转账中使用的是Gwei。当前的进行交易实际上是矿工挑选高的的交易费的交易进行广播打包。具体的gas 其实可以参考gas.now。来进行参考。Gas Pirce 给得太低，矿工不会打包，最后这笔交易会堵塞你的nonce。让你后面的交易无法发出。gas price 给得高，那么矿工会优先打包你的交易。
+     - ![img](https://decenter.org/storage/posts/images/hq3e09q3rXWco1edsiH4Gimd5H4lwg2KtCONatly.jpeg)
+   - Gas limit 用户愿意为某个操作付出的最大的Gas的量，最少是21000。例如某个用户需要进行合约操作，需要使用 50000 gas limit ，当前的 Gas price 是 20 Gwei，那么用户需要付出20000000000 wei*50000=1000000000000000wei=0.001ETH。Gas limit 设置过低，当前交易会因为gas不足的错误而被取消。gas limit 应当比当前消耗的gas 高才行，消耗剩余的gas 会被退回。
+
+   
+
+   
+
+   #### Layer2
+
    - 
 
+   
 
+   
 
 
 
